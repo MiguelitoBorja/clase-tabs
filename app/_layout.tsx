@@ -6,9 +6,9 @@ export default function RootLayout() {
     <Tabs
     screenOptions={{
       tabBarStyle: {
-        backgroundColor: 'white', // Color de fondo de la barra de los tabs
+        backgroundColor: '#e4f0ef', // Color de fondo de la barra de los tabs
       },
-      tabBarActiveTintColor: 'red', // Color del texto y el icono cuando el tab está activo
+      tabBarActiveTintColor: '#0c4ecf', // Color del texto y el icono cuando el tab está activo
       tabBarInactiveTintColor: 'black', // Color del texto y el icono cuando el tab está inactivo
     }}
   >
@@ -17,7 +17,7 @@ export default function RootLayout() {
         options={{
           title: "Perfil",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person" color="red" size={size} />
+            <Ionicons name="person" size={size} />
           ),
         }}
       />
@@ -26,7 +26,7 @@ export default function RootLayout() {
         options={{
           title: "Tarjetas",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="albums" color= "red" size={size} />
+            <Ionicons name="albums" size={size} />
           ),
         }}
       />
@@ -35,7 +35,7 @@ export default function RootLayout() {
         options={{
           title: "Sumador",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="calculator" color="red" size={size} />
+            <Ionicons name="calculator"  size={size} />
           ),
         }}
       />

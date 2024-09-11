@@ -70,5 +70,6 @@ const styles = StyleSheet.create({
   result: {
     fontSize: 20,
     marginTop: 20,
+    color: 'white',
   },
 });

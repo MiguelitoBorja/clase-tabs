@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: 'green',
+    backgroundColor: '#e4f0ef',
   },
   avatar: {
     width: 120,
@@ -63,9 +63,15 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   input: {
-    // Add your input styles here
+    padding: 10,
+    marginBottom: 10,
+    marginTop: 10,
+    textAlign:'center',
+    borderWidth: 1,
+    
   },
   aparecer: {
-    // Add your aparecer styles here
+    
+    backgroundColor: 'black',
   },
 });

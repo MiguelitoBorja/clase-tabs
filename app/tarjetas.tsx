@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 interface TarjetaProps {
@@ -6,7 +6,7 @@ interface TarjetaProps {
 }
 
 const Tarjeta = ({ texto }: TarjetaProps) => {
-  const [isTouched, setIsTouched] = React.useState(false);
+  const [isTouched, setIsTouched] = useState(false);
 
   const handlePress = () => {
 	setIsTouched(!isTouched);
@@ -24,7 +24,7 @@ const Tarjeta = ({ texto }: TarjetaProps) => {
 const Tarjetas = () => {
   return (
 
-	<View style={{width: '50%',backgroundColor: "red"
+	<View style={{width: '60%',backgroundColor: "#e8f5f4",alignSelf: 'center',marginTop:10,
   } }>
     <Tarjeta texto="Tarjeta 1" />
 	  <Tarjeta texto="Tarjeta 2" />
@@ -43,11 +43,15 @@ Pressable: {
     fontSize: 24,
     margin: 10,
     flex:1,
+    borderRadius:20,
+    borderColor: 'black',
+    borderWidth: 2,
     },
 
 PressableTouched: {
     color: 'black',
-    backgroundColor: 'white',
+    backgroundColor: '#72f9ef',
+    borderColor: 'black',
     }
 
 });
