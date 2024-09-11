@@ -1,12 +1,21 @@
-// Perfil.js
-import React from 'react';
-import { View, Text, StyleSheet,TextInput, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button,StyleSheet,TextInput, Image } from 'react-native';
 
 export default function Perfil() {
-  function setnombre(text: string): void {
-    throw new Error('Function not implemented.');
-  }
+  const [nombre, setNombre] = useState("Nombre");  // Estado para el nombre
+  const [nuevoNombre, setNuevoNombre] = useState(""); // Estado para almacenar el nuevo nombre
+  const [aparecer, setAparecer] = useState(false);
 
+  const cambiarNombre = () => {
+    if (nuevoNombre.trim() !== "") {
+      setNombre(nuevoNombre);  // Cambiar el nombre
+      setNuevoNombre("");  // Limpiar el input
+      setAparecer(false);
+    }
+  };
+  const mostrarContenido = () => {
+    setAparecer(true);  // Hacer aparecer el contenido
+  };
   return (
     <View style={styles.container}>
       
@@ -14,18 +23,17 @@ export default function Perfil() {
         style={styles.avatar}
         source={{uri: "../assets/images/icon.png" }} 
       />
-      <Text style={styles.name}>Javito</Text>
-      <Text style={styles.bio}>Merca y tuca.</Text>
-      
-        <View style={styles.container}>
-          {/* ... */}
-          <TextInput
-            style={styles.input}
-            keyboardType="default"
-            onChangeText={(text) => setnombre(text)}
-          />
-        </View>
-  
+    <Text style={styles.name}>{nombre}</Text>
+      {/* Botón para mostrar contenido */}
+      <Button title="cambiar contenido" onPress={mostrarContenido} />
+
+    
+    {aparecer && <><TextInput
+        style={styles.input}
+        placeholder="Nuevo nombre"
+        value={nuevoNombre}
+        onChangeText={text => setNuevoNombre(text)} /><Button title="Cambiar nombre" onPress={cambiarNombre} /></>
+    }
     </View>
   );
 }
@@ -56,5 +64,8 @@ const styles = StyleSheet.create({
   },
   input: {
     // Add your input styles here
+  },
+  aparecer: {
+    // Add your aparecer styles here
   },
 });

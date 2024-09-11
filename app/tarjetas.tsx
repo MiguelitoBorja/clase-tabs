@@ -28,7 +28,7 @@ const Tarjetas = () => {
   } }>
     <Tarjeta texto="Tarjeta 1" />
 	  <Tarjeta texto="Tarjeta 2" />
-	  <Tarjeta texto="Tarjeta 3" />
+	  <Tarjeta texto="Tarjeta 3" /> 
 	</View>
   );
 };
